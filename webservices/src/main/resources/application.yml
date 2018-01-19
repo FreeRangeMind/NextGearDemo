@@ -1,0 +1,22 @@
+spring:
+    profiles:
+        active: dev
+    datasource:
+            dataSourceClassName: org.h2.jdbcx.JdbcDataSource
+            url: jdbc:h2:tcp://localhost/~/test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+            databaseName:
+            serverName:
+            username: sa
+            password:
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        database: H2
+        openInView: false
+        show_sql: true
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+            naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+        properties:
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
